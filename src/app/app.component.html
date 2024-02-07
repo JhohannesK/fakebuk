@@ -1,102 +1,13 @@
 
 <main class="main">
-	<header class="">
-        <nav class="md:px-5 fixed top-0 left-0 right-0 z-50 flex items-center justify-between w-full bg-white shadow-md h-14">
+	<header class="flex h-full">
+        <nav class="fixed top-0 left-0 right-0 z-50 flex justify-between w-full py-2 bg-white shadow-md md:px-5 h-14">
 
-            <!-- Left div -->
-            <div class='flex items-center w-[120px] md:w-[300px]'>
-                <!-- Facebook Logo -->
-                <i class="fa-brands fa-facebook fa-2xl" style="color:#0866ff;"></i>
+			<app-nav-left></app-nav-left>
 
-                <!-- Search and input -->
-                <div class='flex items-center justify-center ml-2 bg-gray-100 rounded-full md:hidden lg:flex md:pl-3 w-9 h-9 lg:flex-1'>
-                    <!-- Search icon -->
-                    <!-- FIXME: CHANGE the size the icon -->
-                    <!-- <img class="flex w-10 p-2 rounded-full item-center shrink-0 h-9 md:h-8 md:w-8 md:ml-2"
-                        src="./src/images/search.png" alt=""/> -->
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                        </svg>
+			<app-nav-links></app-nav-links>
 
-                    <!-- Search bar -->
-                    <input type="text"
-                        class="hidden md:flex items-center px-3 py-1 w-full h-9 rounded-full focus:outline-none bg-gray-100 placeholder:text-[14px]"
-                        placeholder='Search Facebook'>
-                </div>
-            </div>
-            <!-- End of Left div -->
-
-            <!-- Middle div -->
-            <div class="hidden items-center md:flex justify-center w-[20rem] lg:w-[42rem] pr-10 lg:pr-24 shrink-0 space-x-1 lg:gap-16 h-full ">
-                <!-- Div for home button -->
-                <div class="flex items-center justify-center w-10 lg:w-32 h-full border-b-2 border-b-[#0866ff] active:fill-blue-500 active:border-blue-400 hover:bg-gray-100 hover:rounded-lg">
-                    <a href="#" class="flex items-center justify-center">
-                        <i class="fa-solid fa-house fa-lg" style="color: #0866ff;"></i>
-                    </a>
-                </div>
-                <!-- div for video button -->
-                <div class="flex items-center justify-center w-10 h-full pt-2 pb-3 lg:w-32 hover:bg-gray-100 hover:rounded-lg">
-                    <a href="#" class="flex items-center justify-center">
-                       <i class="fa-solid fa-tv fa-lg" style="color: #8d8f92;"></i>
-                    </a>
-                </div>
-                <!-- div for marketplace -->
-                <div class="group relative flex items-center justify-center w-10 h-full pt-2 pb-3 lg:w-32 hover:bg-gray-100 hover:rounded-lg">
-                    <a href="#" class="flex items-center justify-center">
-                       <i class="fa-solid fa-store fa-lg" style="color: #8d8f92;"></i>
-                    </a>
-					<app-tooltip title="marketplace"></app-tooltip>
-                </div>
-                <!-- div for groups button -->
-                <div class="flex items-center justify-center w-10 h-full pt-2 pb-3 lg:w-32 hover:bg-gray-100 hover:rounded-lg">
-                    <a href="#" class="flex items-center justify-center">
-                       <i class="fa-solid fa-users-rectangle fa-lg" style="color: #8d8f92;"></i>
-                    </a>
-                </div>
-								<!-- div for game button -->
-                <div class="flex items-center justify-center w-10 h-full pt-2 pb-3 lg:w-32 hover:bg-gray-100 hover:rounded-lg">
-                     <a href="#" class="flex items-center justify-center">
-                         <i class="fa-solid fa-gamepad fa-lg" style="color: #8d8f92;"></i>
-                     </a>
-                </div>
-            </div>
-            <!-- End of middle div -->
-
-            <div class="flex items-center justify-between w-full md:flex md:w-auto">
-                <div class="px-4 cursor-pointer md:hidden" id="menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                </div>
-
-                <!-- Right div -->
-                <div class="flex gap-3 m-3 justify-end border-none items-center md:w-[20rem]">
-                    <div
-                        class="items-center hidden p-1 space-x-2 rounded-full outline-none hover:bg-gray-200 md:flex hover:cursor-pointer">
-                        <!-- User profile and name -->
-                        <div>
-                            <img src="../assets/nav/avi.jpg" alt=""
-                                class="object-cover rounded-full outline-none h-7 w-7">
-                        </div>
-                        <div class="rounded-full">
-                            <span>Jhohannes </span>
-                        </div>
-
-                    </div>
-                    <div>
-                        <!-- Icons:: should contain divs also -->
-                        <img src="../assets/nav/apps.png" alt=""
-                            class="hidden w-10 h-10 p-3 bg-gray-200 rounded-full md:flex hover:bg-gray-300 hover:cursor-pointer">
-                    </div>
-                    <div>
-						<i class="fa-brands fa-facebook-messenger fa-lg hidden w-10 h-10 p-3 items-center justify-center bg-gray-200 rounded-full md:flex hover:bg-gray-300 hover:cursor-pointer"></i>
-                    </div>
-                    <div>
-                        <i class="fa-solid fa-bell fa-lg hidden w-10 h-10 p-3 items-center justify-center bg-gray-200 rounded-full md:flex hover:bg-gray-300 hover:cursor-pointer"></i>
-					</div>
-                </div>
-            </div>
+          	<app-nav-right></app-nav-right>
 
         </nav>
     </header>
